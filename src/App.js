@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Context } from "./context/Context"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ComponentA from "./components/ComponentA"
+import ComponentB from "./components/ComponentB"
+
+
+
+const App = () => {
+    return (
+        <div>
+            <Context.Provider>
+                <h1>This is a boilerplate for Context + Reducers</h1>
+                <ComponentA />
+                <ComponentB />
+            </Context.Provider>
+        </div>
+    )
 }
 
-export default App;
+export default App
